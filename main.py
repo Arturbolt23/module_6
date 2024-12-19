@@ -1,16 +1,34 @@
-# This is a sample Python script.
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+class Human:
+    head = True
+    _legs = True
+    __arms = True
+    # def __init__(self, name):
+    #     self.name = name
+
+    def say_hello(self):
+        print(f"hello i'm,{self.name}")
+
+    def about(self):
+        print(self.head)
+        print(self._legs)
+        print(self.__arms)
+
+class Student(Human):
+    # def about(self):
+    #     print("I'm a student")
+    arms = False
+    pass
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+class Teacher(Human):
+    pass
 
+human = Human()
+human.about()
+student = Student()
+student.about()
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print(dir(human))
+print(dir(student))
+print(student.Human.__arms)
